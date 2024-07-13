@@ -1,0 +1,96 @@
+Q1.
+a.
+touch info.txt
+
+b.
+cat >> info.txt 
+op-> Exploring the power of Linux commands
+-------------------------------------
+cat info.txt 
+Exploring the power of Linux commands
+
+c.
+cat >> info.txt 
+op-> This file is updated using CLI commands only
+--------------------------------------------
+cat info.txt 
+o/p-> Exploring the power of Linux commands
+This file is updated using CLI commands only
+
+d.
+ls -lh
+-rw-rw-r-- 1 dbda dbda     83 Jul 13 16:39 info.txt
+sudo chmod u+rwx,g+rx,o-r info.txt
+ls -lh
+o/p-> -rwxrwx--- 1 dbda dbda     83 Jul 13 16:39 info.txt
+
+e-g.
+mkdir linux_exam_prnnumber
+mv linux_exam_prnnumber linux_exam_5022
+ls -lh
+-rwxrwx--- 1 dbda dbda     83 Jul 13 16:39 info.txt
+drwxrwxr-x 3 dbda dbda   4.0K Jul 13 14:09 linux_exam
+drwxrwxr-x 2 dbda dbda   4.0K Jul 13 16:42 linux_exam_5022
+cd linux_exam_5022/
+git init
+mv ./../info.txt .
+ls
+o/p-> info.txt
+-------------
+git status
+o/p-> On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git add .
+--------
+git commit . -m "First Commit"
+o/p-> [master (root-commit) 982b54c] First Commit
+ 1 file changed, 2 insertions(+)
+ create mode 100755 info.txt
+-----------------------------
+git branch
+o/p-> * master
+--------------------------
+git config --global user.email "geetanshu915@gmail.com"
+git config --global user.name "Geetanshu22"
+git config user.email
+o/p-> geetanshu915@gmail.com
+----------------------------
+git config user.name
+o/p-> Geetanshu22
+------------------------------
+git log
+o/p-> commit 982b54c09f12160e16a78e837d8089fcd6a74e8c (HEAD -> master)
+Author: SonaliN2000 <nayaksonalim@gmail.com>
+Date:   Sat Jul 13 16:52:16 2024 +0530
+
+    First Commit
+-----------------------------
+git branch -M main
+git remote add origin https://github.com/Geetanshu22/linux_exam.git
+git push -u origin main
+o/p-> Username for 'https://github.com': Geetanshu22
+Password for 'https://Geetanshu22@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Geetanshu22/linux_exam.git/'
+--------------------------------------------------
+git push -u origin main
+o/p-> Username for 'https://github.com': Geetanshu22
+Password for 'https://Geetanshu22@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Geetanshu22/linux_exam.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
